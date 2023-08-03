@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TextInput, Image, ScrollView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
         <Text style={styles.Choose}>Choose the part of the body</Text>
       </View>
       
-      <View style={[styles.boxcont, styles.tomato]}>
+      <TouchableOpacity style={[styles.boxcont, styles.tomato]}>
         <View style={styles.infoContainer}>
           <Text style={styles.tom}>Head & Face</Text>
           <Text style={styles.dis}>11 diseases</Text>
@@ -38,38 +38,45 @@ export default function App() {
           }}
           style={styles.image}
         />
-      </View>
+      </TouchableOpacity>
 
-      <View style={[styles.boxcont, styles.green]}>
-        <Text style={styles.tom}>Head & Face</Text>
-        <Text style={styles.dis}>11 diseases</Text>
+      <TouchableOpacity style={[styles.boxcont, styles.green]}>
+        <View style={styles.infoContainer}>
+          <Text style={styles.tom}>Head & Face</Text>
+          <Text style={styles.dis}>11 diseases</Text>
+        </View>
         <Image 
           source={{
             uri: '/Users/cemuzay/Desktop/image2',
           }}
           style={styles.image}
         />
-      </View>
-      <View style={[styles.boxcont, styles.sandy]}>
-        <Text style={styles.tom}>Head & Face</Text>
-        <Text style={styles.dis}>11 diseases</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity style={[styles.boxcont, styles.sandy]}>
+        <View style={styles.infoContainer}>
+          <Text style={styles.tom}>Head & Face</Text>
+          <Text style={styles.dis}>11 diseases</Text>
+        </View>
         <Image 
           source={{
             uri: '/Users/cemuzay/Desktop/image3',
           }}
           style={styles.image}
         />
-      </View>
-      <View style={[styles.boxcont, styles.blue]}>
-        <Text style={styles.tom}>Head & Face</Text>
-        <Text style={styles.dis}>11 diseases</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={[styles.boxcont, styles.blue]}>
+        <View style={styles.infoContainer}>
+          <Text style={styles.tom}>Head & Face</Text>
+          <Text style={styles.dis}>11 diseases</Text>
+        </View>
         <Image 
           source={{
             uri: '/Users/cemuzay/Desktop/image4',
           }}
           style={styles.image}
         />
-      </View>
+      </TouchableOpacity>
       </ScrollView>
     </SafeAreaView>
   );
@@ -151,3 +158,4 @@ const styles = StyleSheet.create({
     marginTop:10,
   },
 });
+
